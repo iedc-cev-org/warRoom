@@ -37,11 +37,11 @@ export default function Home() {
         {/* Content */}
         <div className="absolute inset-0 z-30 px-2 md:px-4 lg:px-8">
           <div className="h-20 flex items-center">
-            <Image src="/iedc.png" alt="Logo" width={120} height={100} />
+            <Image src="/iedc.png" alt="Logo" width={110} height={100} />
           </div>
 
           <div className="flex justify-center items-center h-[calc(100vh-5rem)]">
-            <p className="text-6xl md:text-7xl font-nebula">WAR<span className="text-red-600">ROOM</span></p>
+            <p className="text-6xl md:text-8xl font-nebula">WAR<span className="text-[#B12C00]">ROOM</span></p>
           </div>
         </div>
       </main>

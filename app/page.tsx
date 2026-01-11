@@ -4,10 +4,12 @@ import Home from '../components/Home'
 import About from '@/components/About'
 import Guidelines from '@/components/Guidelines'
 import Footer from '@/components/Footer'
+import Background from '@/components/Background'
 
 export default function page() {
   return (
       <>
+      <Background/>
          <Home/>
          <About/>
          <Guidelines />

@@ -4,29 +4,15 @@ import Image from "next/image";
 export default function About() {
   return (
     <>
-      <main className="relative min-h-screen bg-amber-200 overflow-hidden">
-        {/* Background Image */}
-        <Image
-          src="/about.png"
-          alt="About background"
-          fill
-          className="object-cover"
-          priority
-        />
-
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
-
-        {/* Content */}
-        <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
-          <div className="max-w-4xl text-center space-y-6">
-            <h1 className="text-white text-4xl md:text-5xl font-black font-orbitron tracking-widest">
-              AB<span className="text-red-600">OUT</span>
-            </h1>
+      <main className="px-4 sm:px-6 md:px-8 relative flex items-center min-h-screen justify-center md:justify-start overflow-hidden">
+          <div className="max-w-7xl mx-auto space-y-6">
+            <p className="text-white text-5xl md:text-7xl font-black font-orbitron tracking-widest mb-10">
+              ABOUT <span className="text-[#B12C00]">WARROOM</span>
+            </p>
 
             <p className="text-slate-200 text-sm md:text-base leading-relaxed font-medium tracking-wide">
               <span className="font-bold text-white">WARROOM</span>, presented by{" "}
-              <span className="text-red-500 font-bold">IEDC CEV</span>, is a
+              <span className="text-[#B12C00] font-bold">IEDC CEV</span>, is a
               24-hour startup simulation designed to turn raw ideas into
               real-world ventures.
             </p>
@@ -39,7 +25,6 @@ export default function About() {
               IEDC CEV shapes the future of innovation and entrepreneurship.
             </p>
           </div>
-        </div>
       </main>
 
      

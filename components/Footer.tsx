@@ -7,7 +7,7 @@ const socialIcons = [Github, Youtube, Instagram];
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black pt-20 pb-10 border-t border-neutral-900">
+    <footer className="bg-black pt-20 pb-10 border-t border-neutral-900 z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top Section */}
@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-6">
             <span className="text-2xl font-black font-orbitron tracking-tighter text-white">
-              WAR<span className="text-red-600">ROOM</span>
+              WAR<span className="text-[#B12C00]">ROOM</span>
             </span>
 
             <p className="text-neutral-400 text-sm leading-relaxed max-w-md">
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
                   key={i}
                   href="#"
                   className="w-9 h-9 rounded-md bg-neutral-900 flex items-center justify-center
-                             text-neutral-400 hover:text-red-600 hover:bg-red-600/10
+                             text-neutral-400 hover:text-[#B12C00] hover:bg-[#B12C00]/10
                              transition-all border border-neutral-800"
                 >
                   <Icon size={16} />
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
           <div className="hidden md:flex justify-end">
             <h1 className="text-5xl lg:text-6xl font-orbitron font-black tracking-widest
                            text-neutral-600/40 select-none">
-              WAR<span className="text-red-600/60">ROOM</span>
+              WAR<span className="text-[#B12C00]/60">ROOM</span>
             </h1>
           </div>
 
