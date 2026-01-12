@@ -51,8 +51,8 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex items-center">
-              {/* <a
+           {/*  <div className="flex items-center">
+              <a
                 href="#register-button"
                 onClick={(e) => {
                   try {
@@ -72,9 +72,9 @@ export default function Home() {
                            hover:bg-[#d63b00] hover:scale-105
                            transition-all duration-200"
               >
-               <h2>REGISTER NOW</h2>
-              </a> */}
-            </div>
+               <h2>REGISTER</h2>
+              </a> 
+            </div>*/}
           </div>
 
           {/* HERO CENTER */}
