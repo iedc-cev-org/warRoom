@@ -10,4 +10,24 @@ body {
   color:white;
 }
 
+/* Fonts: default body uses Montserrat, headings use Nebula */
+body {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-nebula), system-ui, sans-serif;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
 

@@ -5,6 +5,7 @@ import About from '@/components/About'
 import Guidelines from '@/components/Guidelines'
 import Footer from '@/components/Footer'
 import Background from '@/components/Background'
+import Registration from '@/components/Registration'
 
 export default function page() {
   return (
@@ -13,6 +14,7 @@ export default function page() {
          <Home/>
          <About/>
          <Guidelines />
+         <Registration/>
          <Footer/>
       </>
     )

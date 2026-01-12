@@ -1,54 +1,144 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0 },
+};
 
 export default function Guidelines() {
   return (
-    <>
-      <main className="px-4 sm:px-6 md:px-8 relative  flex items-center min-h-screen overflow-hidden">
-          <div className="max-w-7xl w-full mx-auto space-y-6">
-            <h1 className="text-white text-5xl md:text-7xl font-black font-orbitron tracking-widest mb-10">
-              GUIDE<span className="text-[#B12C00]">LINES</span>
-            </h1>
-            <div className="space-y-4 text-slate-200 text-sm md:text-base leading-relaxed tracking-wide font-montserrat">
+    <main className="relative min-h-screen bg-black px-4 sm:px-6 md:px-8 flex items-center overflow-hidden">
 
-              <p className="font-semibold">
-                24 Hour Intense Startup Simulation
-              </p>
-              <p className="text-white font-bold">
-                From 09<sup>th</sup> February, 3:00 PM <br />
-                To 10<sup>th</sup> February, 3:00 PM
-              </p>
+      {/* Ambient glow */}
+      <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#B12C00]/20 blur-[120px]" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 blur-[140px]" />
 
-              <p>
-                Teams will go through{" "}
-                <span className="text-[#B12C00] font-semibold">
-                  ideation, product development,
-                </span>{" "}
-                and a final presentation.
-              </p>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+      >
 
-              <p className="font-semibold text-white">
-                Performance will be judged based on:
-              </p>
+        {/* LEFT SIDE */}
+        <motion.div variants={fadeUp} className="space-y-8">
+          <h1 className="text-white text-5xl md:text-7xl font-black tracking-widest">
+            GUIDE<span className="text-[#B12C00]">LINES</span>
+          </h1>
 
-              <ul className="list-disc list-inside text-slate-300 space-y-2">
-                <li>Innovation</li>
-                <li>Marketing Strategy</li>
-                <li>Customer Review</li>
-                <li>Product Quality</li>
-                <li>Teamwork</li>
-              </ul>
+          <p className="text-slate-300 font-montserrat text-base md:text-lg leading-relaxed max-w-xl">
+            A{" "}
+            <span className="text-white font-semibold">
+              24-hour intense startup simulation
+            </span>{" "}
+            designed to test innovation, strategy, execution, and teamwork
+            under pressure.
+          </p>
 
-              <p className="font-semibold text-white">
-                Open to all students <br />
-                Team must consist of{" "}
-                <span className="text-[#B12C00] font-bold">2 – 4 members</span>
-              </p>
-            </div>
+          {/* Animated timeline */}
+          <div className="relative pl-6">
+            <span className="absolute left-0 top-0 h-full w-[3px] bg-[#B12C00] animate-pulse" />
+            <p className="text-white font-bold font-montserrat">
+              From 09<sup>th</sup> February, 3:00 PM
+            </p>
+            <p className="text-white font-bold font-montserrat">
+              To 10<sup>th</sup> February, 3:00 PM
+            </p>
           </div>
-      </main>
-    </>
+        </motion.div>
+
+        {/* RIGHT SIDE – CARDS */}
+        <motion.div
+          variants={container}
+          className="grid gap-6"
+        >
+
+          {/* Startup Flow */}
+          <motion.div
+            variants={fadeUp}
+            whileHover={{ y: -6 }}
+            className="bg-white/5 backdrop-blur-md border border-white/10
+                       rounded-2xl p-6 hover:border-[#B12C00]/40
+                       transition-all duration-300"
+          >
+            <h3 className="text-white tracking-wider mb-3">
+              STARTUP FLOW
+            </h3>
+            <h2 className="text-slate-300 font-montserrat leading-relaxed">
+              Teams will go through{" "}
+              <span className="text-[#B12C00] font-semibold">
+                ideation, product development,
+              </span>{" "}
+              and conclude with a final presentation to the jury.
+            </h2>
+          </motion.div>
+
+          {/* Judging */}
+          <motion.div
+            variants={fadeUp}
+            whileHover={{ y: -6 }}
+            className="bg-white/5 backdrop-blur-md border border-white/10
+                       rounded-2xl p-6 hover:border-[#B12C00]/40
+                       transition-all duration-300"
+          >
+            <h3 className="text-white tracking-wider mb-4">
+              JUDGING CRITERIA
+            </h3>
+
+            <div className="flex flex-wrap gap-3">
+              {[
+                "Innovation",
+                "Marketing Strategy",
+                "Customer Review",
+                "Product Quality",
+                "Teamwork",
+              ].map((item, i) => (
+                <motion.span
+                  key={i}
+                  whileHover={{ scale: 1.08 }}
+                  className="px-4 py-1.5 rounded-full text-sm font-montserrat
+                             bg-[#B12C00]/10 text-[#B12C00]
+                             border border-[#B12C00]/30"
+                >
+                  {item}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Eligibility */}
+          <motion.div
+            variants={fadeUp}
+            whileHover={{ y: -6 }}
+            className="bg-white/5 backdrop-blur-md border border-white/10
+                       rounded-2xl p-6 hover:border-[#B12C00]/40
+                       transition-all duration-300"
+          >
+            <h2 className="text-white tracking-wider mb-3">
+              ELIGIBILITY
+            </h2>
+            < h4 className="text-slate-300 font-montserrat">
+              Open to all students <br />
+              Team size:
+              <span className="text-[#B12C00] font-bold"> 2 - 4 members</span>
+            </h4>
+          </motion.div>
+
+        </motion.div>
+      </motion.div>
+    </main>
   );
 }
