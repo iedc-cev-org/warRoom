@@ -21,7 +21,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "WARROOM",
+  title: "warrooom | 24 Hour Startup Simulation",
   description: "WARROOM — 24 Hour Startup Simulation by IEDC CEV",
 };
 

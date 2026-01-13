@@ -1,56 +1,103 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Registration() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const headingRef = useRef<HTMLDivElement>(null);
+  const prizeCardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Heading animations
+      if (headingRef.current) {
+        const headings = headingRef.current.children;
+        gsap.from(headings, {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+          },
+          opacity: 0,
+          y: 50,
+          stagger: 0.2,
+          duration: 0.8,
+          ease: "power3.out",
+        });
+      }
+
+      // Prize cards animation
+      if (prizeCardsRef.current) {
+        const cards = Array.from(prizeCardsRef.current.children);
+        gsap.fromTo(cards,
+          {
+            autoAlpha: 0,
+            scale: 0.8,
+            y: 80,
+          },
+          {
+            scrollTrigger: {
+              trigger: prizeCardsRef.current,
+              start: "top 85%",
+              end: "bottom 20%",
+              toggleActions: "play none none none",
+            },
+            autoAlpha: 1,
+            scale: 1,
+            y: 0,
+            stagger: 0.15,
+            duration: 0.8,
+            ease: "back.out(1.4)",
+            immediateRender: false,
+          }
+        );
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <main
+      ref={sectionRef}
       id="registration"
-      className="relative min-h-screen md:min-h-[80vh]
-           mt-16 md:mt-0
+      className="relative min-h-screen
            bg-black px-4 sm:px-6 md:px-8
            flex items-center overflow-hidden"
-
     >
       {/* Background energy */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-[#B12C00]/10" />
+      <div className="absolute inset-0 bg-linear-to-b from-black via-black to-[#B12C00]/10" />
       <div
         className="absolute top-1/2 left-1/2
-                   w-[420px] h-[420px]
-                   bg-[#B12C00]/20 blur-[150px]
+                   w-105 h-105
+                   bg-[#B12C00]/15 blur-[200px]
                    -translate-x-1/2 -translate-y-1/2"
       />
 
       <div
-        className="relative z-10 max-w-6xl mx-auto w-full
+        className="relative z-10 max-w-7xl mx-auto w-full
                    text-center
                    space-y-10 md:space-y-10"
       >
         {/* Heading */}
-        <div className="space-y-3">
-          <h3 className="text-neutral-400 font-orbitron tracking-widest uppercase text-sm">
+        <div ref={headingRef} className="space-y-2 flex flex-col">
+          <h1 className="text-neutral-400 tracking-widest uppercase text-md md:text-lg">
             The War Room Opens For A
-          </h3>
-
-          <h1 className="text-white text-6xl md:text-8xl font-black font-orbitron">
+          </h1>
+          <h1 className="text-white/90 text-6xl md:text-8xl font-bold font-orbitron">
             PRIZE POOL
+          </h1>
+          <h1 className="text-white/90 text-5xl md:text-8xl font-bold font-orbitron hover:text-[#B12C00]">
+            25,000
           </h1>
         </div>
 
-        {/* Total Prize */}
-        <div className="md:-mt-1">
-          <h2
-            className="text-white text-6xl md:text-7xl font-black tracking-wider
-                       transition-transform transition-colors
-                       hover:scale-105 hover:text-[#B12C00]"
-          >
-            25,000
-          </h2>
-        </div>
-
         {/* Prize Breakdown */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-10 mt-8 md:mt-6">
-
+        <div ref={prizeCardsRef} className="grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-10 mt-8 md:mt-6">
           {[
             { title: "FIRST", amount: "12,000" },
             { title: "SECOND", amount: "8,000" },
@@ -64,9 +111,7 @@ export default function Registration() {
                          hover:border-[#B12C00]
                          hover:bg-[#B12C00]/6"
             >
-              <h1 className="text-neutral-400 font-orbitron">
-                {item.title}
-              </h1>
+              <h1 className="text-neutral-400 font-orbitron">{item.title}</h1>
               <h2 className="text-white text-3xl font-bold mt-1">
                 {item.amount}
               </h2>
@@ -75,23 +120,23 @@ export default function Registration() {
         </div>
 
         {/* CTA */}
-       {/*  <div className="pt-8 md:pt-8" id="register-button">
+         {/* <div className="md:mt-10py-2 md:py-4">
           <a
             href="https://snaptiqz.com/event/bbDyA0HmFhKgwv_qlumyR"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-10 py-4 text-lg
                        font-orbitron font-bold
-                       text-white bg-[#B12C00] rounded-md
+                       text-white bg-[#B12C00]/80 rounded-md
                        transition-all
-                       hover:bg-[#d63b00]
+                       hover:bg-[#d63b00]/60
                        hover:scale-105"
           >
            <h1>REGISTER NOW</h1> 
           </a>
 
           <h2 className="text-neutral-400 text-sm mt-3 font-montserrat">
-            Limited slots available. Team size: 2  4 members.
+            Limited slots available. Team size: 2 - 4 members.
           </h2>
         </div> */}
       </div>

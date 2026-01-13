@@ -8,15 +8,13 @@ type LoaderProps = {
 
 const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);
-  const [status, setStatus] = useState(
-    "INITIALIZING WARROOM PROTOCOLS..."
-  );
+  const [status, setStatus] = useState("INITIALIZING WARROOM PROTOCOLS...");
 
   // Progress logic
   useEffect(() => {
     const interval = setInterval(() => {
-      setProgress(prev =>
-        Math.min(prev + Math.floor(Math.random() * 15) + 1, 100)
+      setProgress((prev) =>
+        Math.min(prev + Math.floor(Math.random() * 15) + 1, 100),
       );
     }, 200);
 
@@ -30,7 +28,7 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
       "ESTABLISHING SECURE CONNECTION...",
       "LOADING ASSETS FOR DEPLOYMENT...",
       "ARMING ALL SYSTEMS...",
-      "READY FOR ENGAGEMENT."
+      "READY FOR ENGAGEMENT.",
     ];
 
     let index = 0;

@@ -23,20 +23,21 @@ const socialLinks = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black pt-20 pb-10 border-t border-neutral-900">
+    <footer id="footer" className="bg-black pt-20 pb-10 border-t border-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-14 mb-16 items-center">
-
           {/* LEFT – BRAND */}
           <div className="space-y-6 text-center md:text-left">
             <span className="text-2xl font-black font-orbitron tracking-tighter text-white">
-              <h1>WAR<span className="text-[#B12C00]">ROOM</span></h1>
+              <h1>
+                WAR<span className="text-[#B12C00]">ROOM</span>
+              </h1>
             </span>
 
             <h2 className="text-neutral-400 text-sm leading-relaxed max-w-md mx-auto md:mx-0">
-              WHERE IEDC CEV SHAPES THE FUTURE OF INNOVATION AND ENTREPRENEURSHIP.
+              WHERE IEDC CEV SHAPES THE FUTURE OF INNOVATION AND
+              ENTREPRENEURSHIP.
             </h2>
 
             <div className="flex justify-center md:justify-start gap-4">
@@ -59,7 +60,6 @@ const Footer: React.FC = () => {
 
           {/* RIGHT – CONTACT (ALWAYS) + WARROOM TEXT (DESKTOP ONLY) */}
           <div className="flex flex-col items-center md:items-end justify-end space-y-5">
-
             {/* WARROOM TEXT → DESKTOP ONLY */}
             <div className="hidden md:block text-right">
               <h1
@@ -91,7 +91,6 @@ const Footer: React.FC = () => {
                 <h2 className="tracking-wide">+91 9567377351</h2>
               </div>
             </a>
-
           </div>
         </div>
 
@@ -101,7 +100,6 @@ const Footer: React.FC = () => {
             © 2026 WARROOM // IEDC CEV
           </h2>
         </div>
-
       </div>
     </footer>
   );
