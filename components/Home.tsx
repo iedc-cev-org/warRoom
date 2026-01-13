@@ -88,7 +88,7 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="md:hidden absolute inset-0 h-full w-full object-cover"
+          className="md:hidden absolute inset-0 h-full w-full object-cover blur-sm"
         />
 
         {/* Desktop Background Video */}

@@ -74,7 +74,7 @@ export default function About() {
   }, []);
 
   return (
-    <main ref={sectionRef} id="about" className="relative min-h-screen bg-black px-4 sm:px-6 md:px-8 flex items-center overflow-hidden">
+    <main ref={sectionRef} id="about" className="relative min-h-screen md:min-h-[85vh] bg-black px-4 sm:px-6 md:px-8 flex items-center overflow-hidden">
       {/* Ambient glow effects */}
       {/* <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#B12C00]/20 blur-[120px]" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 blur-[140px]" /> */}

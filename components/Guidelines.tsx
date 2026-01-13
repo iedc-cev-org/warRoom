@@ -89,7 +89,7 @@ export default function Guidelines() {
     <main
       ref={sectionRef}
       id="guidelines"
-      className="relative min-h-screen px-4 sm:px-6 md:px-8
+      className="relative min-h-screen md:min-h-[85vh] px-4 sm:px-6 md:px-8
                  flex md:items-start items-center bg-black
                  md:pt-24 overflow-hidden"
     >

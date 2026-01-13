@@ -65,7 +65,7 @@ export default function Registration() {
     <main
       ref={sectionRef}
       id="registration"
-      className="relative min-h-screen
+      className="relative min-h-screen md:min-h-[85vh]
            bg-black px-4 sm:px-6 md:px-8
            flex items-center overflow-hidden"
     >
