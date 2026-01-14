@@ -143,7 +143,7 @@ export default function Home() {
 
           {/* HERO CENTER */}
           <div className="flex flex-col justify-center items-center h-[calc(100vh-5rem)] text-center">
-            <h1 ref={titleRef} className="text-6xl md:text-8xl font-nebula">
+            <h1 ref={titleRef} className="text-5xl md:text-8xl font-nebula">
               WARROOM
             </h1>
 

@@ -94,7 +94,7 @@ export default function Guidelines() {
                  md:pt-24 overflow-hidden"
     >
       <div className="relative z-10 max-w-7xl mx-auto w-full">
-        <div className="space-y-8 flex flex-col md:flex-row md:gap-12">
+        <div className="space-y-8 flex flex-col lg:flex-row md:gap-12">
           <div className="w-full md:max-w-[70%]">
             <h1 ref={titleRef} className="text-white/90 text-[3rem] md:text-[5rem] font-black mb-2 tracking-wide">
               GUIDE<span className="text-[#B12C00]">LINES</span>
