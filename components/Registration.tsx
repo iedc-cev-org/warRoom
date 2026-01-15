@@ -88,7 +88,7 @@ export default function Registration() {
           <h1 className="text-neutral-400 tracking-widest uppercase text-md md:text-lg">
             The War Room Opens For A
           </h1>
-          <h1 className="text-white/90 text-6xl md:text-8xl font-bold font-orbitron">
+          <h1 className="text-white/90 text-4xl md:text-8xl font-bold font-orbitron">
             PRIZE POOL
           </h1>
           <h1 className="text-white/90 text-5xl md:text-8xl font-bold font-orbitron hover:text-[#B12C00]">
@@ -120,12 +120,12 @@ export default function Registration() {
         </div>
 
         {/* CTA */}
-         {/* <div className="md:mt-10py-2 md:py-4">
+         <div className="md:mt-10py-2 md:py-4" id ="register-button">
           <a
             href="https://snaptiqz.com/event/bbDyA0HmFhKgwv_qlumyR"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-10 py-4 text-lg
+            className="inline-block px-8 py-3 text-md md:text-lg
                        font-orbitron font-bold
                        text-white bg-[#B12C00]/80 rounded-md
                        transition-all
@@ -138,7 +138,7 @@ export default function Registration() {
           <h2 className="text-neutral-400 text-sm mt-3 font-montserrat">
             Limited slots available. Team size: 2 - 4 members.
           </h2>
-        </div> */}
+        </div> 
       </div>
     </main>
   );
