@@ -122,7 +122,7 @@ export default function Registration() {
         {/* CTA */}
          <div className="md:mt-10py-2 md:py-4" id ="register-button">
           <a
-            href="https://snaptiqz.com/event/bbDyA0HmFhKgwv_qlumyR"
+            href="https://snaptiqz.com/event/kH73nYeNV3tDreX7kM1tl"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-3 text-md md:text-lg
