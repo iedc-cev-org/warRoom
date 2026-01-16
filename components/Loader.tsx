@@ -24,11 +24,11 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
   // Status updates
   useEffect(() => {
     const updates = [
-      "SYNCHRONIZING TACTICAL DATA...",
-      "ESTABLISHING SECURE CONNECTION...",
-      "LOADING ASSETS FOR DEPLOYMENT...",
-      "ARMING ALL SYSTEMS...",
-      "READY FOR ENGAGEMENT.",
+      "IDEATION...",
+      "MVP...",
+      "REVENUE GENERATION...",
+      "CHALLENGES...",
+      "READY FOR ENGAGEMENT..",
     ];
 
     let index = 0;
