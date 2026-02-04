@@ -115,7 +115,7 @@ export default function Home() {
               />
             </div>
 
-              <div className="flex items-center">
+             {/*} <div className="flex items-center">
               <a
                 href="#register-button"
                 onClick={(e) => {
@@ -138,7 +138,7 @@ export default function Home() {
               >
                <h2>REGISTER</h2>
               </a> 
-            </div>
+            </div>*/}
           </div>
 
           {/* HERO CENTER */}

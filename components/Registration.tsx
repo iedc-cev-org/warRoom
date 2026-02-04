@@ -119,26 +119,23 @@ export default function Registration() {
           ))}
         </div>
 
-        {/* CTA */}
-         <div className="md:mt-10py-2 md:py-4" id ="register-button">
-          <a
-            href="https://snaptiqz.com/event/kH73nYeNV3tDreX7kM1tl"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-3 text-md md:text-lg
-                       font-orbitron font-bold
-                       text-white bg-[#B12C00]/80 rounded-md
-                       transition-all
-                       hover:bg-[#d63b00]/60
-                       hover:scale-105"
-          >
-           <h1>REGISTER NOW</h1> 
-          </a>
+{/* CTA – Registration Closed */}
+<div className="md:mt-10 py-2 md:py-4 text-center" id="register-button">
+  <div className="inline-block px-8 py-3
+  border border-[#B12C00]/40
+  bg-[#B12C00]/10
+  rounded-md cursor-not-allowed select-none">
+  <h1 className="text-[#E5B3A4] font-orbitron tracking-widest uppercase">
+    Registration Closed
+  </h1>
+</div>
 
-          <h2 className="text-neutral-400 text-sm mt-3 font-montserrat">
-            Limited slots available. Team size: 2 - 4 members.
-          </h2>
-        </div> 
+
+  <h2 className="text-neutral-500 text-sm mt-3 font-montserrat">
+    All slots have been filled. Stay tuned for future events.
+  </h2>
+</div>
+
       </div>
     </main>
   );
